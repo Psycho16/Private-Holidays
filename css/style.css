@@ -89,7 +89,6 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 890px;
     padding: 50px 25px;
     background-color: #ffffff;
     top: 95%; }
