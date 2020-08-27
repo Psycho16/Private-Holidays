@@ -1,0 +1,377 @@
+$color-header: #ffffff;
+$color-main: #ecf0f1;
+$color-title: #171d1c;
+@mixin font-kepler{
+  font-family: 'kepler-std-semicondensed-dis', monospace;
+}
+@font-face {
+  font-family: 'ionicons';
+  src: url(../fonts/ionicons.ttf)
+}
+@font-face {
+  font-family: 'Script';
+  src: url(../fonts/PinyonScript-Regular.ttf)
+}
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url(../fonts/ProximaNova-Light.ttf)
+}
+@font-face {
+  font-family: 'ProximaNovaExtrabld';
+  src: url(../fonts/ProximaNova-Extrabld.ttf)
+}
+@font-face {
+  font-family: 'ProximaNovaSemiBold';
+  src: url(../fonts/ProximaNova-Semibold.ttf)
+}
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url(../fonts/ProximaNova-Regular.ttf)
+}
+.span-1 {
+  background-image: url('../img/white-hand.svg');
+}
+.span-2 {
+  background-image: url('../img/white-calendar.svg');
+}
+.span-3 {
+  background-image: url('../img/white-diamond.svg');
+}
+input {
+  outline: none;
+}
+.section-title {
+  margin: auto;
+  margin-top: 90px;
+  font-size: 48px;
+  color: $color-title;
+  margin-bottom: 90px;
+  font-family: 'font-kepler', sans-serif;
+}
+body {
+  max-width: 1366px;
+  margin: auto;
+  position: relative;
+  background-color: $color-main;
+  box-sizing: border-box;
+}
+.header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $color-header;
+  height: 70px;
+  width: 100%;
+  z-index: 10;
+  
+  &-title {
+    font-family: 'Script', sans-serif; // тут должен быть lust Script
+    color: $color-title;
+    font-size: 36px;
+  }
+  &-link {
+    font-family: 'ProximaNovaSemiBold', serif;
+    color: #8f9197;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(69, 72, 81);
+    text-transform: uppercase;
+  }
+  
+}
+.beach-section {
+  background-image: url('../img/main-bg.png');
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 760px;
+  margin-bottom: 150px;
+  &-title {
+    font-size: 60px;
+    color: $color-header;
+    font-family: ProximaNovaExtrabld, serif;
+    text-transform: uppercase;
+  }
+  .reservation-form {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 890px;
+    padding: 50px 25px;
+    background-color: $color-header;
+    top: 95%;
+    &-input {
+      color: #999999;
+      margin-right: 15px;
+      border: none;
+      border-bottom: solid 1px #999999;
+    }
+    &-button{
+      border: none;
+      background-color: $color-header;
+      overflow: hidden;
+      &-img {
+        border-radius: 50%;
+        width: 30px;
+        border: none;
+        height: 30px;
+        background-color: #f31131;
+      }
+    }
+    &-button:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}
+  .ideas-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-title {
+      flex-basis: 100%;
+    }
+    &-cards {
+      display: flex;
+      margin-bottom: 91px;
+
+      &__card {
+        display: flex;
+        position: relative;
+        align-items: space-between;
+        justify-content: center;
+        margin-right: 15px;
+        width: 420px;
+        height: 323px;
+        
+        &__subtitle {
+          position: absolute;
+          text-align: center;
+          top: 64%;
+          margin: auto;
+          font-size: 24px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 60px;
+          padding-right: 60px;
+          background-color: #ffffff;
+          font-family: 'font-kepler', sans-serif;
+          border: 1px solid black;
+          outline: 15px solid #ffffff;
+          width: 232px;
+        }
+        &__img{
+          width: 100%;
+          height: 320px;
+        }
+      }
+    }
+  }
+.locations-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-title{
+    flex-basis: 100%;
+  }
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    &__card {
+      display: flex;
+      width: 580px;
+      background-color: rgb(255, 255, 255);
+      margin-left: 15px;
+      margin-right: 15px;
+      height: 300px;
+      margin-bottom: 30px;
+      &__img {
+        margin-right: 20px;
+          width: 270px;
+      }
+      &__wrapper{
+        &__title{
+            font-size: 30px;
+            font-family: 'font-kepler', sans-serif;
+            color: rgb(23, 29, 28);
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: left;
+        }
+        &__descrption {
+            font-size: 16px;
+            width: 240px;
+            font-family: "ProximaNovaLight", sans-serif;
+            word-break:break-word;
+            color: rgb(69, 72, 81);
+            font-weight: bold;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 110px;
+        }
+        &__button {
+            background-color: rgb(243, 17, 49);
+            width: 120px;
+            height: 40px;
+            border-radius: 35px;
+            border: none;
+            font-size: 14px;
+            font-family: "ProximaNova", sans-serif;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+      }
+    }
+  }
+}
+.differences-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-title{
+    flex-basis: 100%;
+  }
+  &-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &-card{
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      &__span {
+        margin: auto;
+        height: 100px;
+        width: 100px;
+        // background-image: url('../img/android-hand.svg');
+        background-color: #15a763;
+        border: 30px solid #15a763;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position-x: 10px;
+        background-position-y: 12px;
+        background-size: contain;
+      }
+      &__title {
+        margin: auto;
+        margin-top: 25px;
+        font-family: 'font-kepler', sans-serif;
+        margin-bottom: 0;
+      }
+      &__description {
+        width: 350px;
+        margin: auto;
+        height: 80px;
+        margin-top: 15px;
+        text-align: center;
+        font-family: 'ProximaNovaLight';
+        color: rgb(69, 72, 81);
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+    }
+  }
+}
+.footer {
+  margin-top: 90px;
+  position: relative;
+  background-color: #171d1c;
+  &-img {
+    width: 100%;
+    margin-bottom: 0;
+    height: 570px;
+  }
+  &-form {
+    background-color: $color-header;
+    position: absolute;
+    bottom: 304px;
+    left: 57%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 391px;
+    height: 400px;
+    &-title {
+        font-size: 30px;
+        font-family: 'font-kepler', sans-serif;
+        color: rgb(26, 26, 26);
+        font-weight: bold;
+        text-align: left;
+    }
+    &-input {
+      color: #999999;
+      border: none;
+      border-bottom: solid 1px #999999;
+      width: 305px;
+    }
+
+  }
+  &-text {
+    height: 300px;
+    background-color: #171d1c;
+    margin-top: 0;
+    display: flex;
+    align-items: baseline;
+    padding-left: 50px;
+    padding-right: 50px;
+    &-information {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-basis: 15%;
+      &-title {
+        font-size: 16px;
+        font-family: 'ProximaNovaSemiBold', serif;
+        color: rgb(255, 255, 255);
+      }
+      &-link {
+        font-size: 14px;
+        font-family: 'ProximaNovaLight', serif;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        margin-bottom: 5px;
+      }
+    }
+    &-destinations {
+      flex-basis: 30%;
+      display: flex;
+      &-wrapper {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &__link {
+          margin-right: 45px;
+        }
+      }
+    }
+  }
+  &-adress{
+
+    &-information {
+      align-items: flex-end;
+      &-link {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+
